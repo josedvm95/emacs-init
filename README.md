@@ -11,7 +11,8 @@ It uses 'Better Defaults' by Phil Hagelberg.
 
 1. Clone this repository.
 2. Substitute your init-file with this one.
-3. Run Emacs.
+3. Change the paths to your Better Defaults and love-minor-mode-v2
+4. Run Emacs.
 
 ## Copyright
 
