@@ -60,10 +60,11 @@
 ;; This must come before configurations of
 ;; installed packages and after the package-archives.
 ;; Don't delete this line.
+;; Initialize the package infraestructure.
 (package-initialize)
 
 ;; Use Better Defaults.
-(add-to-list 'load-path "better-defaults")
+(add-to-list 'load-path (expand-file-name "better-defaults" user-emacs-directory))
 (require 'better-defaults)
 
 ;; Install 'use-package' if necessary.
@@ -77,6 +78,9 @@
 
 ;; Make sure we load the Custom File
 (load-file custom-file)
+
+;; Enable line numbers globally
+(global-linum-mode t)
 
 ;; Enable Dark Theme.
 (use-package dracula-theme
@@ -220,7 +224,7 @@
   :ensure t
   :demand t)
 
-;; Enable Lua highlighting
+;; Enable and install Lua mode automatically (for highlighting)
 (use-package lua-mode
   :ensure t
   :mode (("\\.lua$" . lua-mode)))
