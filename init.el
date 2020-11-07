@@ -147,14 +147,6 @@
   :ensure t
   :demand t)
 
-;; Enable and install Lua mode automatically (for highlighting)
-(use-package lua-mode
-  :ensure t
-  :mode (("\\.lua$" . lua-mode)))
-
-;; Use love-minor-mode-v2
-(add-to-list 'load-path (expand-file-name "love-minor-mode-v2" user-emacs-directory))
-(use-package love-minor-mode-v2)
 
 ;; Set deferred timer to reset the garbage colection and file-name-handler-alist.
 (run-with-idle-timer
