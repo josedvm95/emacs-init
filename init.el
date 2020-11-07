@@ -160,6 +160,7 @@
    ;;(message "gc-cons-threshold and file-name-handler-alist restored")
    ))
 
+;; Show startup time.
 ;; Use a hook so the message doesn't get clobbered by other messages.
 (add-hook 'emacs-startup-hook
           (lambda ()
