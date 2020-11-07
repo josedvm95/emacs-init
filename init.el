@@ -35,6 +35,9 @@
 
 ;;; Code:
 
+
+(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+
 ;; Make startup faster by reducing the frequency of garbage
 ;; collection.  The default is 800 kilobytes.  Measured in bytes.
 ;; Save the original value to restore it later.
@@ -103,6 +106,12 @@
 (use-package crux
   :ensure t
   :bind (("C-a" . crux-move-beginning-of-line)))
+
+;;----------------------------------------------------------------------------
+;; Load configs for specific features and modes
+;;----------------------------------------------------------------------------
+(use-package init-lua)
+
 
 ;; Org mode configuration for better experience.
 ;; Get rid of the XML validation.
