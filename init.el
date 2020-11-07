@@ -63,7 +63,7 @@
 (package-initialize)
 
 ;; Use Better Defaults.
-(add-to-list 'load-path "/home/josedvm95/Documentos/emacs/better-defaults")
+(add-to-list 'load-path "better-defaults")
 (require 'better-defaults)
 
 ;; Install 'use-package' if necessary.
@@ -74,7 +74,6 @@
 ;; Enable use-package
 (eval-and-compile
   (require 'use-package))
-(require 'bind-key)
 
 ;; Make sure we load the Custom File
 (load-file custom-file)
@@ -86,8 +85,9 @@
   (load-theme 'dracula t))
 
 ;; Hide all buffers starting with an asterisk when using Ibuffer (configured in Better Defaults)
-(require 'ibuf-ext)
-(add-to-list 'ibuffer-never-show-predicates "^\\*")
+(use-package ibuf-ext
+  :config
+  (add-to-list 'ibuffer-never-show-predicates "^\\*"))
 
 ;; Make the mouse scrolling smoother.
 ;; Three lines at a time, 1 when holding shift. 
@@ -162,6 +162,23 @@
    org-babel-execute:bash
    org-babel-expand-body:bash))
 
+;; Enable C and C++ language compiling in Org mode.
+(use-package ob-C
+  :defer t
+  :ensure org-plus-contrib
+  :commands
+  (org-babel-execute:cpp
+   org-babel-expand-body:cpp
+
+   org-babel-execute:C++
+   org-babel-expand-body:C++
+
+   org-babel-execute:C
+   org-babel-expand-body:C))
+
+;; Refresh inline images after executing src blocks
+(add-hook 'org-babel-after-execute-hook #'org-redisplay-inline-images)
+
 ;; Enable Markdown highlighting
 (use-package markdown-mode
   :ensure t
@@ -190,6 +207,18 @@
   (recentf-mode t)
   :custom
   (recentf-max-saved-items 25))
+
+;; Slightly shorten eldoc display delay.
+;; And hide the minor mode in the modeline.
+(use-package eldoc
+  :diminish eldoc-mode
+  :config
+  (setq eldoc-idle-delay 0.4))
+
+;; To be able to use the diminish keywork in use-package.
+(use-package diminish
+  :ensure t
+  :demand t)
 
 ;; Enable Lua highlighting
 (use-package lua-mode
