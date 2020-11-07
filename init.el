@@ -114,14 +114,6 @@
 (use-package init-org)
 
 
-;; LaTeX configuration.
-;; Enable document parsing for LaTeX.
-(use-package tex
-  :ensure auctex
-  :custom
-  (TeX-auto-save t)
-  (TeX-parse-self t))
-
 ;; Enable Markdown highlighting
 (use-package markdown-mode
   :ensure t
