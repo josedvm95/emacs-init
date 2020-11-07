@@ -112,6 +112,7 @@
 ;;----------------------------------------------------------------------------
 (use-package init-lua)
 (use-package init-org)
+(use-package init-latex)
 (use-package init-markdown)
 
 
