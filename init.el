@@ -230,7 +230,7 @@
   :mode (("\\.lua$" . lua-mode)))
 
 ;; Use love-minor-mode-v2
-(add-to-list 'load-path "/home/josedvm95/Documentos/emacs/love-minor-mode-v2")
+(add-to-list 'load-path (expand-file-name "love-minor-mode-v2" user-emacs-directory))
 (use-package love-minor-mode-v2)
 
 ;; Set deferred timer to reset the garbage colection and file-name-handler-alist.
