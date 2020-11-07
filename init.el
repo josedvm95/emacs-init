@@ -40,8 +40,8 @@
 
 ;; Make startup faster by reducing the frequency of garbage
 ;; collection.  The default is 800 kilobytes.  Measured in bytes.
-;; Save the original value to restore it later.
-(setq gc-cons-threshold-original gc-cons-threshold)
+;; Set a value of 20 MB for normal use.
+(setq gc-cons-threshold-normal (* 20 1000 1000))
 (setq gc-cons-threshold (* 50 1000 1000))
 
 ;; Make startup faster by avoiding to run the regexps inside file-name-handler-alist.
@@ -152,9 +152,9 @@
 (run-with-idle-timer
  5 nil
  (lambda ()
-   (setq gc-cons-threshold gc-cons-threshold-original)
+   (setq gc-cons-threshold gc-cons-threshold-normal)
    (setq file-name-handler-alist file-name-handler-alist-original)
-   (makunbound 'gc-cons-threshold-original)
+   (makunbound 'gc-cons-threshold-normal)
    (makunbound 'file-name-handler-alist-original)
    ;; Optional message.
    ;;(message "gc-cons-threshold and file-name-handler-alist restored")
