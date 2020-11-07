@@ -138,10 +138,6 @@
   :config
   (use-package ox-md))
 
-;; Support for exporting to Markdown in Org Mode.
-;;(eval-after-load "org"
-;;  '(require 'ox-md nil t))
-
 ;; LaTeX configuration.
 ;; Enable document parsing for LaTeX.
 (use-package tex
