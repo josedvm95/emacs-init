@@ -114,6 +114,7 @@
 (use-package init-org)
 (use-package init-latex)
 (use-package init-markdown)
+(use-package init-python)
 
 
 ;; Enable recent files with Ido mode.
