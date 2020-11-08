@@ -13,6 +13,13 @@
   :hook ((python-mode . anaconda-mode)
          (python-mode . anaconda-eldoc-mode)))
 
+;; Enable Black formatter
+(use-package reformatter
+  :ensure t
+  :config
+  (reformatter-define black
+    :program "black"))
+
 ;; For company mode with anaconda
 ;(use-package company-anaconda
 ;  :ensure t
