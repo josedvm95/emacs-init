@@ -115,6 +115,7 @@
 (use-package init-latex)
 (use-package init-markdown)
 (use-package init-python)
+(use-package init-onlinesearch)
 
 
 ;; Enable recent files with Ido mode.
