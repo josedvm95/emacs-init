@@ -10,11 +10,17 @@ It uses 'Better Defaults' by Phil Hagelberg.
 ## Usage
 
 1. Go into your `.emacs.d` directory:
-`cd ~/.emacs.d`
+```
+cd ~/.emacs.d
+```
 2. Clone Better Defaults repository:
-`git clone https://git.sr.ht/~technomancy/better-defaults`
+```
+git clone https://git.sr.ht/~technomancy/better-defaults
+```
 3. Clone this repository:
-`git clone https://github.com/josedvm95/emacs-init.git ~/.emacs.d`
+```
+git clone https://github.com/josedvm95/emacs-init.git ~/.emacs.d
+```
 4. Run Emacs.
 
 ## Copyright
