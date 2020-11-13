@@ -9,7 +9,7 @@
 ;; Change the breadcrumb separator to '→'.
 ;; Define more TODO keywords.
 (use-package org
-  :mode (("\\.org$" . org-mode))
+  :mode (("\\.org\\'" . org-mode))
   :ensure org-plus-contrib
   :bind (("C-c l" . org-store-link)
          ("C-c a" . org-agenda)
