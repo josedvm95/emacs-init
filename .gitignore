@@ -1,0 +1,20 @@
+# Ignore unnecessary folders
+*~
+\#*
+/anaconda-mode/
+/auto-save-list/
+/backups/
+/better-defaults/
+.cache/
+/custom.el
+/elpa/
+/elpa-*
+/eshell/
+/games/
+/ido.last
+/love-minor-mode-v2
+/places
+/recentf
+/tramp
+url/
+.*.lock
