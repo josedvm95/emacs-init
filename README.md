@@ -7,6 +7,8 @@ It configures: Org mode, LaTeX and Markdown.
 
 It uses 'Better Defaults' by Phil Hagelberg.
 
+Compatible only with Emacs 26.1+.
+
 ## Usage
 
 1. Go into your `.emacs.d` directory:
