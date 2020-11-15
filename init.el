@@ -125,6 +125,7 @@
 (use-package init-programming)
 (use-package init-flycheck)
 (use-package init-xml)
+(use-package init-json)
 
 
 ;; Enable recent files with Ido mode.
