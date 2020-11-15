@@ -59,6 +59,12 @@
 ;; Any add to list for package-archives (to add marmalade or melpa) goes here.
 (add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
 (add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/"))
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+
+;; Set higher priority to MELPA Stable
+(setq package-archive-priorities '(("melpa-stable" . 10)
+                                   ("melpa"        . 5)
+                                   ("org"          . 1)))
 
 ;; This must come before configurations of
 ;; installed packages and after the package-archives.
