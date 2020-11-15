@@ -124,6 +124,7 @@
 (use-package init-onlinesearch)
 (use-package init-programming)
 (use-package init-flycheck)
+(use-package init-xml)
 
 
 ;; Enable recent files with Ido mode.
