@@ -8,7 +8,7 @@
 ;; Enable anaconda for code navegation, documentation lookup and code completion.
 (use-package anaconda-mode
   :ensure t
-  :after (python)
+  :after python
   :diminish anaconda-mode
   :hook ((python-mode . anaconda-mode)
          (python-mode . anaconda-eldoc-mode)))
