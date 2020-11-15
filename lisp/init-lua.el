@@ -6,7 +6,7 @@
 ;; Enable and install Lua mode automatically (for highlighting)
 (use-package lua-mode
   :ensure t
-  :mode (("\\.lua\\'" . lua-mode))
+  :mode "\\.lua\\'"
   :custom
   (lua-indent-level 2)
   (indent-tabs-mode nil))
