@@ -14,11 +14,16 @@
          (python-mode . anaconda-eldoc-mode)))
 
 ;; Enable Black formatter
-(use-package reformatter
+;(use-package reformatter
+;  :ensure t
+;  :config
+;  (reformatter-define black
+;    :program "black"))
+
+(use-package blacken
   :ensure t
-  :config
-  (reformatter-define black
-    :program "black"))
+  :hook (python-mode . blacken-mode)
+  :custom (blacken-line-length 79))
 
 ;; For company mode with anaconda
 ;(use-package company-anaconda
