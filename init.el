@@ -117,6 +117,7 @@
 (use-package init-python)
 (use-package init-onlinesearch)
 (use-package init-programming)
+(use-package init-flycheck)
 
 
 ;; Enable recent files with Ido mode.
