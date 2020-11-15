@@ -15,12 +15,12 @@
   :custom
   (nxml-child-indent 4)
   (nxml-attribute-indent 4)
-  (nxml-slash-auto-complete-flag t))
-
-(defun pretty-xml-buffer ()
-  "Pretty print XML on buffer"
-  (interactive)
-  (sgml-pretty-print (point-min) (point-max)))
+  (nxml-slash-auto-complete-flag t)
+  :preface
+  (defun pretty-xml-buffer ()
+    "Pretty print XML on buffer"
+    (interactive)
+    (sgml-pretty-print (point-min) (point-max))))
 
 (provide 'init-xml)
 ;;; init-xml.el ends here
