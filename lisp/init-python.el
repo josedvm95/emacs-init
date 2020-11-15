@@ -13,11 +13,13 @@
   :hook ((python-mode . anaconda-mode)
          (python-mode . anaconda-eldoc-mode)))
 
+;; Enable blacken for code reformatting only in Python
 (use-package blacken
   :ensure t
   :diminish
   :hook (python-mode . blacken-mode)
-  :bind ("C-c b" . blacken-buffer)
+  :bind (:map python-mode-map
+         ("C-c b" . blacken-buffer))
   :custom (blacken-line-length 79))
 
 ;; For company mode with anaconda
