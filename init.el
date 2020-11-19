@@ -85,8 +85,10 @@
 (eval-and-compile
   (require 'use-package))
 
-;; Make sure we load the Custom File
-(load-file custom-file)
+;; Load the Custom File
+;; Make sure that the file exists before loading it
+(when (file-exists-p custom-file)
+  (load-file custom-file))
 
 ;; Enable line numbers globally
 (global-linum-mode t)
