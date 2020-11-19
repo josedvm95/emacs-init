@@ -110,6 +110,9 @@
 (setq mouse-wheel-scroll-amount '(3 ((shift) . 1)))
 (setq mouse-wheel-progressive-speed nil)
 
+;; Make paste replace the selection
+(delete-selection-mode 1)
+
 ;; Remap C-a to go to first non-whitespace character instead of first character.
 (use-package crux
   :ensure t
