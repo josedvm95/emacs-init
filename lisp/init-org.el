@@ -70,5 +70,11 @@
 ;; Refresh inline images after executing src blocks
 (add-hook 'org-babel-after-execute-hook #'org-redisplay-inline-images)
 
+;; Export with different properties for different formats
+(defun init/org-export-edit-suffix (backend)
+  (replace-string "<TARGET>.opts.org" (format "%s.opts.org" backend)))
+
+(add-hook 'org-export-before-processing-hook #'init/org-export-edit-suffix)
+
 (provide 'init-org)
 ;;; init-org.el ends here
